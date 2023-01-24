@@ -1,13 +1,15 @@
 import { createSlice } from "@reduxjs/toolkit";
 
-const initialState = { selectedProjectId: 0 };
+const initialState = { projectId: 0 };
 
 const portfolioSlice = createSlice({
     name: "portfolioSlice",
     initialState,
     reducers: {
         selectedProjectIdChanged(state, action) {
-            state.selectedProjectId = action.payload.projectId;
+            console.log(action.payload);
+            state.portfolio = action.payload.selectedProjectId;
+            console.log(state.portfolio);
         },
     },
 });
