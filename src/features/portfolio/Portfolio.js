@@ -12,9 +12,8 @@ export default function Portfolio() {
 
     function updateSelectedProjectId(event) {
         event.preventDefault();
-        const selectedProjectId = event.target.selectedProjectId.value;
-        dispatch(selectedProjectIdChanged({ selectedProjectId }));
-        console.log(projectId);
+        const projectId = event.target.selectedProjectId.value;
+        dispatch(selectedProjectIdChanged({ projectId }));
     }
 
     return (

@@ -7,9 +7,7 @@ const portfolioSlice = createSlice({
     initialState,
     reducers: {
         selectedProjectIdChanged(state, action) {
-            console.log(action.payload);
-            state.portfolio = action.payload.selectedProjectId;
-            console.log(state.portfolio);
+            state.projectId = action.payload.projectId;
         },
     },
 });
